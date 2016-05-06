@@ -2,12 +2,12 @@
 
 PANEL_FIFO=/tmp/panel-fifo
 PANEL_HEIGHT=24
-VOLUME_PIPE=/tmp/.volume-pipe 
+VOLUME_FIFO=/tmp/.volume-pipe 
 
 bspc config top_padding $PANEL_HEIGHT
 
 [[ -e "$PANEL_FIFO"  ]] || mkfifo "$PANEL_FIFO"
-[[ -e "$VOLUME_PIPE" ]] || mkfifo "$VOLUME_PIPE"
+[[ -e "$VOLUME_FIFO" ]] || mkfifo "$VOLUME_FIFO"
 
 bspc subscribe report > "$PANEL_FIFO" &
 
