@@ -1,14 +1,10 @@
 #! /bin/bash
 
-PANEL_FIFO=/tmp/panel-fifo
-PANEL_HEIGHT=24
-VOLUME_FIFO=/tmp/.volume-pipe 
+bspc config top_padding $BSPWM_PANEL_HEIGHT
 
-bspc config top_padding $PANEL_HEIGHT
+[[ -e "$BSPWM_PANEL_FIFO"  ]] || mkfifo "$BSPWM_PANEL_FIFO"
+[[ -e "$BSPWM_VOLUME_FIFO" ]] || mkfifo "$BSPWM_VOLUME_FIFO"
 
-[[ -e "$PANEL_FIFO"  ]] || mkfifo "$PANEL_FIFO"
-[[ -e "$VOLUME_FIFO" ]] || mkfifo "$VOLUME_FIFO"
+bspc subscribe report > "$BSPWM_PANEL_FIFO" &
 
-bspc subscribe report > "$PANEL_FIFO" &
-
-/home/ovaube/.config/bspwm/panel_xmobar < "$PANEL_FIFO" | xmobar 
+/home/ovaube/.config/bspwm/panel_xmobar < "$BSPWM_PANEL_FIFO" | xmobar 
