@@ -89,6 +89,7 @@ source $ZSH/oh-my-zsh.sh
 alias ycmd='python2 /opt/YCMD/ycmd/ycmd --port=28608 --options_file=/opt/YCMD/default_settings.json'
 alias cp='cp -v'
 alias mv='mv -v'
+alias rm='rm -v'
 alias mkdir='mkdir -pv'
 alias cmakerelease='cmake -DCMAKE_BUILD_TYPE=Release'   
 alias cmakedebug='cmake -DCMAKE_BUILD_TYPE=Debug'   
