@@ -57,7 +57,6 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export GOROOT="/usr/lib/go"
 export GOPATH="/media/dev/go"
 export PATH=$GOPATH/bin:$HOME/bin:/usr/local/bin:$PATH
-# export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -93,7 +92,7 @@ alias rm='rm -v'
 alias mkdir='mkdir -pv'
 alias cmakerelease='cmake -DCMAKE_BUILD_TYPE=Release'   
 alias cmakedebug='cmake -DCMAKE_BUILD_TYPE=Debug'   
-
+alias tmux="tmux -2"
 
 extract () {
   if [ -f $1 ] ; then
@@ -116,3 +115,5 @@ extract () {
     echo "'$1' is not a valid file"
   fi
 }
+
+TERM="screen-256color"
