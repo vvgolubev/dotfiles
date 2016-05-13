@@ -57,6 +57,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export GOROOT="/usr/lib/go"
 export GOPATH="/media/dev/go"
 export PATH=$GOPATH/bin:$HOME/bin:/usr/local/bin:$PATH
+export REPORTER_REMOTE="https://svn.domain.corp/rianews/rblitz"
 
 source $ZSH/oh-my-zsh.sh
 
