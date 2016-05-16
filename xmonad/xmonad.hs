@@ -277,7 +277,7 @@ myStartupHook = startup
 startup :: X ()
 startup = do
           spawn "feh --bg-scale /media/images/black.jpg"
-          spawn "~/.xmonad/gifbg.sh /media/images/featherfurl.gif"
+          spawn "~/dotfiles/scripts/gifbg.sh /media/images/featherfurl.gif"
           spawn "/opt/Telegram/Telegram"
           spawn "deluge"
           spawn "cbatticon" 
