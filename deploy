@@ -1,0 +1,26 @@
+#!/bin/sh
+
+chsh  -s `which zsh`
+ln    -s ${PWD}/zsh/.zshrc           ~/.zshrc
+
+ln    -s ${PWD}/tmux/.tmux.conf      ~/.tmux.conf
+
+mkdir -p ~/.vim/colors/
+ln    -s ${PWD}/vim/.vimrc           ~/.vimrc
+ln    -s ${PWD}/vim/wombat256mod.vim ~/.vim/colors/wombat256mod.vim
+
+mkdir ~/xmonad/
+ln    -s ${PWD}/xmonad/xmonad.hs     ~/xmonad/xmonad.hs
+ln    -s ${PWD}/xmonad/.xmobarrc     ~/.xmobarrc
+
+mkdir ~/.config/
+
+ln    -s ${PWD}/bspwm                ~/.config/bspwm
+ln    -s ${PWD}/sxhkdrc              ~/.config/sxhkdrc
+
+ln    -s ${PWD}/look/.icons          ~/.icons
+ln    -s ${PWD}/look/.themes         ~/.themes
+ln    -s ${PWD}/look/.gtkrc-2.0      ~/.gtkrc-2.0
+ln    -s ${PWD}/look/.Xdefaults      ~/.Xdefaults
+
+ln    -s ${PWD}/look/Trolltech.conf  ~/.config/Trolltech.conf
