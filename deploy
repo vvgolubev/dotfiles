@@ -30,3 +30,7 @@ ln    -vs ${PWD}/look/Trolltech.conf       ~/.config/Trolltech.conf
 mkdir -v  ~/.config/sublime-text-3
 
 ln    -vs ${PWD}/subl3/Installed\ Packages ~/.config/sublime-text-3/
+
+mkdir -v  ~/bin
+chmod +x  ${PWD}/scripts/*
+ln    -vs ${PWD}/scripts/*				   ~/bin/
