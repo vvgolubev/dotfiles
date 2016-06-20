@@ -34,3 +34,7 @@ ln    -vs ${PWD}/subl3/Installed\ Packages ~/.config/sublime-text-3/
 mkdir -v  ~/bin
 chmod +x  ${PWD}/scripts/*
 ln    -vs ${PWD}/scripts/*				   ~/bin/
+
+sudo mkdir -pv /usr/share/sddm
+sudo ln    -vs ${PWD}/sddm/sddm.conf       /etc/sddm.conf
+sudo ln    -vs ${PWD}/sddm/themes          /usr/share/sddm/
