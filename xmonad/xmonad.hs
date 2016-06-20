@@ -65,8 +65,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [ ((modm,               xK_Return), spawn $ XMonad.terminal conf)
  
     -- volume
-    , ((modm,                   xK_F7), spawn "amixer -c 0 set Master 2%- && ~/dotfiles/scripts/getvolume.sh 1> /tmp/.volume-pipe")
-    , ((modm,                   xK_F8), spawn "amixer -c 0 set Master 2%+ && ~/dotfiles/scripts/getvolume.sh 1> /tmp/.volume-pipe")
+    , ((modm,                   xK_F7), spawn "amixer -c 0 set Master 2%- && getvolume.sh 1> /tmp/.volume-pipe")
+    , ((modm,                   xK_F8), spawn "amixer -c 0 set Master 2%+ && getvolume.sh 1> /tmp/.volume-pipe")
 
     -- screenshot
     , ((0,                   xK_Print), spawn "scrot    -z -e 'mv $f ~/scrots/'")
@@ -277,7 +277,6 @@ myStartupHook = startup
 startup :: X ()
 startup = do
           spawn "feh --bg-scale /media/images/black.jpg"
-          spawn "~/dotfiles/scripts/gifbg.sh /media/images/featherfurl.gif"
           spawn "/opt/Telegram/Telegram"
           spawn "deluge"
           spawn "cbatticon" 
