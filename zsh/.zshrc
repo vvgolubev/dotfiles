@@ -98,5 +98,3 @@ alias tmux="tmux -2"
 alias сука="sudo"
 
 TERM="screen-256color"
-
-tmux
