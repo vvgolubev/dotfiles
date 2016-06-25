@@ -36,5 +36,5 @@ chmod +x  ${PWD}/scripts/*
 ln    -vs ${PWD}/scripts/*				   ~/bin/
 
 sudo mkdir -pv /usr/share/sddm/themes
-sudo cp    -rv ${PWD}/sddm/sddm.conf       /etc/sddm.conf
+sudo ln    -vs ${PWD}/sddm/sddm.conf       /etc/sddm.conf
 sudo cp    -rv ${PWD}/sddm/themes/*        /usr/share/sddm/themes/
