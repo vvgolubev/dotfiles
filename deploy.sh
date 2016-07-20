@@ -1,8 +1,8 @@
 #!/bin/sh
 
 chsh  -v   `which zsh`
-ln    -vfs ${PWD}/zsh/.zshrc                ~/.zshrc
-ln    -vfs ${PWD}/bash/.bashrc              ~/.bashrc
+ln    -vfs ${PWD}/shell/.zshrc                ~/.zshrc
+ln    -vfs ${PWD}/shell/.profile              ~/.profile
 
 ln    -vfs ${PWD}/tmux/.tmux.conf           ~/.tmux.conf
 
