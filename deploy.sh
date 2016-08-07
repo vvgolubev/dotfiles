@@ -1,8 +1,17 @@
 #!/bin/sh
 
+sudo pacman -S wget tar
+
+wget https://aur.archlinux.org/cgit/aur.git/snapshot/pacaur.tar.gz
+tar -xvf pacaur.tar.gz
+cd pacaur && makepkg -sri
+cd .. && rm -rf pacaur.tar.gz pacaur
+
+${PWD}/starter-kit.sh
+
 chsh  -v   `which zsh`
-ln    -vfs ${PWD}/shell/.zshrc                ~/.zshrc
-ln    -vfs ${PWD}/shell/.profile              ~/.profile
+ln    -vfs ${PWD}/shell/.zshrc              ~/.zshrc
+ln    -vfs ${PWD}/shell/.profile            ~/.profile
 
 ln    -vfs ${PWD}/tmux/.tmux.conf           ~/.tmux.conf
 
@@ -28,13 +37,9 @@ ln    -vfs ${PWD}/look/.Xdefaults           ~/.Xdefaults
 
 ln    -vfs ${PWD}/look/Trolltech.conf       ~/.config/Trolltech.conf
 
-mkdir -v   ~/.config/sublime-text-3
-
-ln    -vfs ${PWD}/subl3/Installed\ Packages ~/.config/sublime-text-3/
-
 mkdir -v   ~/bin
 chmod +x   ${PWD}/scripts/*
-ln    -vfs ${PWD}/scripts/*				   ~/bin/
+ln    -vfs ${PWD}/scripts/*				    ~/bin/
 
 sudo mkdir -pv  /usr/share/sddm/themes
 sudo ln    -vfs ${PWD}/sddm/sddm.conf       /etc/sddm.conf
