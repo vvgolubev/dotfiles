@@ -1,8 +1,14 @@
 #!/bin/sh
 
-pacaur -S \ # official repos
+sudo pacman -S \
+	wget \
+	tar \
 	zsh \
 	vim \
+	rxvt-unicode \
+	alsa-utils \
+	feh \
+	openssh sshfs \
 	sddm \
 	sxhkd \
 	clementine \
@@ -15,7 +21,16 @@ pacaur -S \ # official repos
 	network-manager-applet \
 	trayer \
 	deluge \
-	\ # aur
+	screenfetch \
+	lxappearance 
+
+wget https://aur.archlinux.org/cgit/aur.git/snapshot/pacaur.tar.gz
+tar -xvf pacaur.tar.gz
+cd pacaur && makepkg -sri
+cd .. && rm -rf pacaur.tar.gz pacaur
+
+pacaur -S \
 	sublime-text-dev \
 	telegram-desktop \
-	
+	dmenu2 \
+	wmutils-git

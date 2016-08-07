@@ -1,12 +1,5 @@
 #!/bin/sh
 
-sudo pacman -S wget tar
-
-wget https://aur.archlinux.org/cgit/aur.git/snapshot/pacaur.tar.gz
-tar -xvf pacaur.tar.gz
-cd pacaur && makepkg -sri
-cd .. && rm -rf pacaur.tar.gz pacaur
-
 ${PWD}/starter-kit.sh
 
 chsh  -v   `which zsh`
