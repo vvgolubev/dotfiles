@@ -1,5 +1,6 @@
 #!/bin/sh
 
+chmod +x ${PWD}/starter-kit.sh
 ${PWD}/starter-kit.sh
 
 chsh  -v   `which zsh`

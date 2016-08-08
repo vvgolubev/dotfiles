@@ -1,6 +1,9 @@
 #!/bin/sh
 
 sudo pacman -S \
+	sudo \
+	expac \
+	perl \
 	wget \
 	tar \
 	zsh \
@@ -23,6 +26,11 @@ sudo pacman -S \
 	deluge \
 	screenfetch \
 	lxappearance 
+
+wget https://aur.archlinux.org/cgit/aur.git/snapshot/cower.tar.gz
+tar -xvf cower.tar.gz
+cd cower && makepkg -sri --skippgpcheck
+cd .. && rm -rf cower.tar.gz cower
 
 wget https://aur.archlinux.org/cgit/aur.git/snapshot/pacaur.tar.gz
 tar -xvf pacaur.tar.gz
