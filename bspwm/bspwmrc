@@ -30,9 +30,8 @@ trayer --edge top \
 	   --height 23 \
 	   --padding 1 &
 feh --bg-scale /media/images/gits-arch.jpg &
-/opt/Telegram/Telegram &
+telegram-desktop &
 deluge &
 cbatticon &
 nm-applet &
-xset b off
-
+xset b off &
