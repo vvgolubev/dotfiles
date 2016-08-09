@@ -25,7 +25,9 @@ sudo pacman -S \
 	trayer \
 	deluge \
 	screenfetch \
-	lxappearance 
+	lxappearance \ 
+    scrot \
+    htop    
 
 wget https://aur.archlinux.org/cgit/aur.git/snapshot/cower.tar.gz
 tar -xvf cower.tar.gz
@@ -42,3 +44,8 @@ pacaur -S \
 	telegram-desktop \
 	dmenu2 \
 	wmutils-git
+
+PREV=$PWD
+cd ~/
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+cd $PREV
