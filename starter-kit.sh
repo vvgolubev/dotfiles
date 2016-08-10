@@ -27,7 +27,8 @@ sudo pacman -S \
 	screenfetch \
 	lxappearance \ 
     scrot \
-    htop    
+    htop \
+    ttf-fira-mono
 
 wget https://aur.archlinux.org/cgit/aur.git/snapshot/cower.tar.gz
 tar -xvf cower.tar.gz
