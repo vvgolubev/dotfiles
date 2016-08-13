@@ -29,7 +29,7 @@ trayer --edge top \
 	   --heighttype pixel \
 	   --height 23 \
 	   --padding 1 &
-feh --bg-scale /media/images/gits-arch.jpg &
+feh --bg-scale ~/dotfiles/look/bg &
 telegram-desktop &
 deluge &
 cbatticon &
