@@ -98,3 +98,5 @@ alias tmux="tmux -2"
 alias сука="sudo"
 
 TERM="screen-256color"
+
+. /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

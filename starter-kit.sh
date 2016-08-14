@@ -6,7 +6,7 @@ sudo pacman -S \
 	perl \
 	wget \
 	tar \
-	zsh \
+	zsh zsh-syntax-highlighting \
 	vim \
 	rxvt-unicode \
 	alsa-utils \
@@ -19,7 +19,7 @@ sudo pacman -S \
 	xmobar \
 	tmux \
 	xorg-server xorg-server-utils xorg-xinit \
-	chromium \
+	firefox \
 	gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gst-libav gvfs \
 	network-manager-applet \
 	trayer \
