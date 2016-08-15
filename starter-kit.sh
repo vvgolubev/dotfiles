@@ -1,7 +1,6 @@
 #!/bin/sh
 
 sudo pacman -S \
-	sudo \
 	expac \
 	perl \
 	wget \
