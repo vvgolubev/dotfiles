@@ -27,7 +27,8 @@ sudo pacman -S \
 	lxappearance \ 
     scrot \
     htop \
-    ttf-fira-mono
+    ttf-fira-mono \
+    ntfs-3g
 
 wget https://aur.archlinux.org/cgit/aur.git/snapshot/cower.tar.gz
 tar -xvf cower.tar.gz
@@ -43,7 +44,9 @@ pacaur -S \
 	sublime-text-dev \
 	telegram-desktop \
 	dmenu2 \
-	wmutils-git
+	wmutils-git \
+	gtk-theme-arc \
+	xorg-fonts-type1
 
 PREV=$PWD
 cd ~/
