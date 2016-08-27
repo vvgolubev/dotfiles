@@ -41,3 +41,5 @@ sudo cp    -rfv ${PWD}/sddm/themes/*        /usr/share/sddm/themes/
 
 sudo ln    -vfs ${PWD}/vim/.vimrc           /etc/vimrc
 sudo ln    -vfs ${PWD}/vim/wombat256mod.vim /usr/share/vim/vim74/colors/wombat256mod.vim
+
+mkdir ~/scrots

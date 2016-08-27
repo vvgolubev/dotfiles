@@ -28,7 +28,8 @@ sudo pacman -S \
     scrot \
     htop \
     ttf-fira-mono \
-    ntfs-3g
+    ntfs-3g \
+	unclutter
 
 wget https://aur.archlinux.org/cgit/aur.git/snapshot/cower.tar.gz
 tar -xvf cower.tar.gz
