@@ -1,7 +1,35 @@
 #!/bin/sh
 
-chmod +x ${PWD}/starter-kit.sh
-${PWD}/starter-kit.sh
+# Initial setup
+install_packages=false
+help="This is a custom deploy script for initial archlinux setup.\n"
+help="$help Options:\n"
+help="$help -i: install packages (disabled by default)\n"
+
+# Parse params
+OPTIND=1
+while getopts ":h?i" opt; do
+	case $opt in
+		h)
+			echo -e $help
+			exit 1
+			;;
+		i)
+			install_packages=true
+			;;
+		\?)
+			echo "Invalid option: -$OPTARG"
+			echo -e $help
+			exit 1
+			;;
+	esac
+done
+
+# Action!
+if $install_packages; then
+	chmod +x ${PWD}/starter-kit.sh
+	${PWD}/starter-kit.sh
+fi
 
 chsh  -v   `which zsh`
 ln    -vfs ${PWD}/shell/.zshrc              ~/.zshrc
@@ -42,4 +70,4 @@ sudo cp    -rfv ${PWD}/sddm/themes/*        /usr/share/sddm/themes/
 sudo ln    -vfs ${PWD}/vim/.vimrc           /etc/vimrc
 sudo ln    -vfs ${PWD}/vim/wombat256mod.vim /usr/share/vim/vim74/colors/wombat256mod.vim
 
-mkdir ~/scrots
+mkdir -v ~/scrots
