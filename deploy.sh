@@ -31,7 +31,7 @@ if $install_packages; then
 	${PWD}/starter-kit.sh
 fi
 
-chsh  -v   `which zsh`
+chsh  -s   `which zsh`
 ln    -vfs ${PWD}/shell/.zshrc              ~/.zshrc
 ln    -vfs ${PWD}/shell/.profile            ~/.profile
 
