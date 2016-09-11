@@ -15,6 +15,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export GOROOT="/usr/lib/go"
 export GOPATH="/media/dev/go"
 export PATH=$GOPATH/bin:$HOME/bin:/usr/local/bin:$PATH
+export EDITOR=vim
 
 alias ycmd='python2 /opt/YCMD/ycmd/ycmd --port=28608 --options_file=/opt/YCMD/default_settings.json'
 alias cp='cp -v'
