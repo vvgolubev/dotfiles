@@ -1,3 +1,10 @@
+run-tmux() {
+    TERM="screen-256color"
+    if [[ -z "$TMUX" ]]; then
+        tmux -2
+    fi
+}
+
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="af-magic"
 plugins=(git github nyan)
@@ -15,8 +22,4 @@ alias mv='mv -v'
 alias rm='rm -v'
 alias mkdir='mkdir -pv'
 
-# tmux setup and exec
-TERM="screen-256color"
-if [[ -z "$TMUX" ]]; then
-    tmux -2
-fi
+# run-tmux
