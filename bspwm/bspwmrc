@@ -7,14 +7,14 @@ bspc config split_ratio          	0.5
 bspc config borderless_monocle   	true
 bspc config gapless_monocle      	true
 bspc config focus_follows_pointer 	true
-bspc config external_rules_command  /home/ovaube/.config/bspwm/get-split-direction.sh
+bspc config external_rules_command  ~/.config/bspwm/get-split-direction.sh
 
 bspc monitor -d 1 2 3 4 5 6 7 8 9 10
 
-. /home/ovaube/.config/bspwm/profile
+. ~/.config/bspwm/profile
 
 sxhkd &
-/home/ovaube/.config/bspwm/panel &
+~/.config/bspwm/panel &
 
 trayer --edge top \
 	   --align right \
@@ -29,7 +29,8 @@ trayer --edge top \
 	   --heighttype pixel \
 	   --height 23 \
 	   --padding 1 &
-feh --bg-scale ~/dotfiles/look/bg &
+feh --bg-scale ~/dotfiles/look/Wallpapers/solid-000000-1920x1080.jpg &
+~/bin/gifbg.sh ~/dotfiles/look/Wallpapers/beesnbombs-worms.gif &
 telegram-desktop &
 deluge &
 cbatticon &
