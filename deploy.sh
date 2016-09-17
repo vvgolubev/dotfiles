@@ -39,7 +39,11 @@ ln    -vfs ${PWD}/tmux/.tmux.conf           ~/.tmux.conf
 
 mkdir -vp  ~/.vim/colors/
 ln    -vfs ${PWD}/vim/.vimrc                ~/.vimrc
-ln    -vfs ${PWD}/vim/wombat256mod.vim      ~/.vim/colors/wombat256mod.vim
+ln    -vfs ${PWD}/vim/colors/*              ~/.vim/colors/*
+
+sudo mkdir -vp  /usr/share/vim/vim74/colors
+sudo ln    -vfs ${PWD}/vim/.vimrc           /etc/vimrc
+sudo ln    -vfs ${PWD}/vim/colors/*         /usr/share/vim/vim74/colors/*
 
 mkdir -v  ~/.xmonad/
 ln    -vfs ${PWD}/xmonad/xmonad.hs          ~/.xmonad/xmonad.hs
@@ -66,8 +70,5 @@ ln    -vfs ${PWD}/scripts/*				    ~/bin/
 sudo mkdir -pv  /usr/share/sddm/themes
 sudo ln    -vfs ${PWD}/sddm/sddm.conf       /etc/sddm.conf
 sudo cp    -rfv ${PWD}/sddm/themes/*        /usr/share/sddm/themes/
-
-sudo ln    -vfs ${PWD}/vim/.vimrc           /etc/vimrc
-sudo ln    -vfs ${PWD}/vim/wombat256mod.vim /usr/share/vim/vim74/colors/wombat256mod.vim
 
 mkdir -v ~/scrots

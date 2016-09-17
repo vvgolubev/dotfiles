@@ -36,7 +36,7 @@ set backspace=2
 """""""""""""""""""""""""""""""""""""""""""
 
 syntax enable
-colorscheme wombat256mod
+colorscheme material-theme 
 
 
 " Mouse support in console
