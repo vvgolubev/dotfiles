@@ -39,11 +39,11 @@ ln    -vfs ${PWD}/tmux/.tmux.conf           ~/.tmux.conf
 
 mkdir -vp  ~/.vim/colors/
 ln    -vfs ${PWD}/vim/.vimrc                ~/.vimrc
-ln    -vfs ${PWD}/vim/colors/*              ~/.vim/colors/*
+ln    -vfs ${PWD}/vim/colors/*              ~/.vim/colors/
 
 sudo mkdir -vp  /usr/share/vim/vim74/colors
 sudo ln    -vfs ${PWD}/vim/.vimrc           /etc/vimrc
-sudo ln    -vfs ${PWD}/vim/colors/*         /usr/share/vim/vim74/colors/*
+sudo ln    -vfs ${PWD}/vim/colors/*         /usr/share/vim/vim74/colors/
 
 mkdir -v  ~/.xmonad/
 ln    -vfs ${PWD}/xmonad/xmonad.hs          ~/.xmonad/xmonad.hs
