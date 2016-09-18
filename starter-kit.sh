@@ -1,53 +1,16 @@
 #!/bin/sh
 
-sudo pacman -S \
-	expac \
-	perl \
-	wget \
-	tar \
-	zsh zsh-syntax-highlighting \
-	vim \
-	rxvt-unicode \
-	alsa-utils \
-	feh \
-	openssh sshfs \
-	sddm \
-	sxhkd \
-	clementine \
-	bspwm \
-	xmobar \
-	tmux \
-	xorg-server xorg-server-utils xorg-xinit \
-	firefox \
-	gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gst-libav gvfs \
-	network-manager-applet \
-	trayer \
-	deluge \
-	screenfetch \
-	lxappearance \ 
-    scrot \
-    htop \
-    ttf-fira-mono \
-    ntfs-3g \
-	unclutter
+install_from_aur() {
+	wget https://aur.archlinux.org/cgit/aur.git/snapshot/$1.tar.gz
+	tar -xvf $1.tar.gz
+	cd $1 && makepkg -sri --skippgpcheck
+	cd .. && rm -rf $1.tar.gz $1
+}
 
-wget https://aur.archlinux.org/cgit/aur.git/snapshot/cower.tar.gz
-tar -xvf cower.tar.gz
-cd cower && makepkg -sri --skippgpcheck
-cd .. && rm -rf cower.tar.gz cower
+install_from_aur cower
+install_from_aur pacaur
 
-wget https://aur.archlinux.org/cgit/aur.git/snapshot/pacaur.tar.gz
-tar -xvf pacaur.tar.gz
-cd pacaur && makepkg -sri
-cd .. && rm -rf pacaur.tar.gz pacaur
-
-pacaur -S \
-	sublime-text-dev \
-	telegram-desktop \
-	dmenu2 \
-	wmutils-git \
-	gtk-theme-arc \
-	xorg-fonts-type1
+pacaur -S echo `cat paclist`
 
 PREV=$PWD
 cd ~/
