@@ -5,10 +5,11 @@ install_packages=false
 help="This is a custom deploy script for initial archlinux setup.\n"
 help="$help Options:\n"
 help="$help -i: install packages (disabled by default)\n"
+help="$help -s: change shell to \$arg (disabled by default)\n"
 
 # Parse params
 OPTIND=1
-while getopts ":h?i" opt; do
+while getopts ":h?is:" opt; do
 	case $opt in
 		h)
 			echo -e $help
@@ -16,6 +17,9 @@ while getopts ":h?i" opt; do
 			;;
 		i)
 			install_packages=true
+			;;
+		s)	
+			shell=$OPTARG
 			;;
 		\?)
 			echo "Invalid option: -$OPTARG"
@@ -31,8 +35,12 @@ if $install_packages; then
 	${PWD}/starter-kit.sh
 fi
 
-chsh  -s   `which zsh`
-ln    -vfs ${PWD}/shell/.zshrc              ~/.zshrc
+if ! [[ -z ${shell+x} ]]; then
+	which_shell=`which $shell`
+	[[ -z $which_shell ]] && echo "No such shell: $shell" || chsh -s $which_shell
+fi
+
+n    -vfs ${PWD}/shell/.zshrc              ~/.zshrc
 ln    -vfs ${PWD}/shell/.profile            ~/.profile
 
 ln    -vfs ${PWD}/tmux/.tmux.conf           ~/.tmux.conf
