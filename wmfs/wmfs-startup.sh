@@ -13,24 +13,10 @@ tme(){
     tme="$(date +"%H:%M")"
     echo "^s[right;$grey;$tme;$clear ]"
 }
- 
-TIMING=1
- 
-statustext()
-{
-    wmfs -c status "top $(dte) $(tme)"
-}
 
-feh --bg-scale /media/images/mars.jpg &
-#~/.config/wmfs/gifbg.sh /media/images/featherfurl.gif &
-/opt/Telegram/Telegram & 
-deluge &
-cbatticon & 
-nm-applet & 
-xset b off & 
- 
-while true;
-do
-    statustext
-    sleep $TIMING
+~/bin/autorun.sh 
+
+while true; do
+    wmfs -c status "top $(dte) $(tme)"
+    sleep 1
 done
