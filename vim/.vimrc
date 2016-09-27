@@ -3,11 +3,13 @@ runtime! archlinux.vim
 set wm=0
 set nu
 set nowrap
-set smarttab
 
 " Tabs section
-set shiftwidth=4
-set tabstop=4
+set tabstop=8 
+set softtabstop=0 
+set expandtab 
+set shiftwidth=4 
+set smarttab
 
 " New line tabs
 set si
