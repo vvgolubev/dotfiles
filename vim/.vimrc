@@ -11,14 +11,15 @@ set expandtab
 set shiftwidth=4 
 set smarttab
 
+" Show some invisible symbols
+set list
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+
 " New line tabs
 set si
 
 " C-style tabs
 set cin
-
-" Highlight search
-set hlsearch
 
 " Smart search
 set incsearch
@@ -30,8 +31,8 @@ set wildmode=list:longest,full
 " Pleasant backspace
 set backspace=2
 
-" 256 colors in term
-"set t_Co=256
+" Mouse support in console
+set mouse=a
 
 """""""""""""""""""""""""""""""""""""""""""
 "Colors/fonts
@@ -40,6 +41,3 @@ set backspace=2
 syntax enable
 colorscheme wombat256mod
 
-
-" Mouse support in console
-set mouse=a
