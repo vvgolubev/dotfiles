@@ -80,3 +80,6 @@ sudo ln    -vfs ${PWD}/sddm/sddm.conf       /etc/sddm.conf
 sudo cp    -rfv ${PWD}/sddm/themes/*        /usr/share/sddm/themes/
 
 mkdir -v ~/scrots
+
+sudo mkdir -pv  /etc/X11/xorg.conf.d
+sudo ln    -vfs ${PWD}/X11/*                /etc/X11/xorg.conf.d/
