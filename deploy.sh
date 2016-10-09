@@ -40,7 +40,7 @@ if ! [[ -z ${shell+x} ]]; then
 	[[ -z $which_shell ]] && echo "No such shell: $shell" || chsh -s $which_shell
 fi
 
-n    -vfs ${PWD}/shell/.zshrc              ~/.zshrc
+ln    -vfs ${PWD}/shell/.zshrc              ~/.zshrc
 ln    -vfs ${PWD}/shell/.profile            ~/.profile
 
 ln    -vfs ${PWD}/tmux/.tmux.conf           ~/.tmux.conf
