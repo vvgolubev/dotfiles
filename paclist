@@ -24,10 +24,12 @@ lxappearance
 scrot 
 htop 
 ttf-fira-mono 
-ntfs-3g 
+ntfs-3g
+gifsicle
 unclutter
 telegram-desktop 
 dmenu2 
 wmutils-git 
 gtk-theme-arc 
 xorg-fonts-type1
+shantz-xwinwrap-bzr
