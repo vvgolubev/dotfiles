@@ -7,4 +7,3 @@ deluge &
 cbatticon &
 nm-applet &
 xset b off &
-unclutter -idle 1 &
