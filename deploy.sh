@@ -43,8 +43,6 @@ fi
 ln    -vfs ${PWD}/shell/.zshrc              ~/.zshrc
 ln    -vfs ${PWD}/shell/.profile            ~/.profile
 
-ln    -vfs ${PWD}/tmux/.tmux.conf           ~/.tmux.conf
-
 mkdir -vp  ~/.vim/colors/
 ln    -vfs ${PWD}/vim/.vimrc                ~/.vimrc
 ln    -vfs ${PWD}/vim/colors/*              ~/.vim/colors/
@@ -53,13 +51,9 @@ sudo mkdir -vp  /root/.vim/colors
 sudo ln    -vfs ${PWD}/vim/.vimrc           /root/.vimrc
 sudo ln    -vfs ${PWD}/vim/colors/*         /root/.vim/colors/
 
-mkdir -v  ~/.xmonad/
-ln    -vfs ${PWD}/xmonad/xmonad.hs          ~/.xmonad/xmonad.hs
 ln    -vfs ${PWD}/xmonad/.xmobarrc          ~/.xmobarrc
 
 mkdir -v   ~/.config/
-
-ln    -vfs ${PWD}/wmfs                      ~/.config/
 
 ln    -vfs ${PWD}/bspwm                     ~/.config/
 ln    -vfs ${PWD}/sxhkd                     ~/.config/
