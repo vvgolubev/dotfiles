@@ -1,34 +1,26 @@
-expac 
-perl 
-wget 
-tar 
-zsh zsh-syntax-highlighting 
-vim 
-rxvt-unicode 
-alsa-utils 
-feh 
-openssh sshfs 
-sddm 
-sxhkd 
-bspwm 
-xmobar 
-tmux 
-xorg-server xorg-server-utils xorg-xinit 
+xorg
+vim
+rxvt-unicode-256color
+alsa-utils
+feh
+sshfs
+sddm
+sxhkd
+bspwm
+xmobar
+tmux
 chromium
-gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gst-libav gvfs 
-network-manager-applet 
-trayer 
-deluge 
-screenfetch 
-lxappearance  
-scrot 
-htop 
-ttf-fira-mono 
+network-manager-gnome
+trayer
+deluge
+screenfetch
+lxappearance
+scrot
+htop
 ntfs-3g
 gifsicle
-telegram-desktop 
-dmenu2 
-wmutils-git 
-gtk-theme-arc 
-xorg-fonts-type1
-shantz-xwinwrap-bzr
+telegram-desktop
+dmenu
+arc-theme
+zsh zsh-syntax-highlighting
+gitk

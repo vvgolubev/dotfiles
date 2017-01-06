@@ -8,7 +8,7 @@ run-tmux() {
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="af-magic"
 plugins=(git github nyan)
-. /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+. /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSH/oh-my-zsh.sh
 
 export XDG_CONFIG_HOME="$HOME/.config"

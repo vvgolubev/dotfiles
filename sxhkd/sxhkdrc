@@ -20,7 +20,7 @@ super + Return
 
 # program launcher
 super + p
-	dmenu_run -fn FiraMono-10:normal -h 23
+	dmenu_run -fn FiraMono-10:normal
 
 # make sxhkd reload its configuration files:
 super + shift + r

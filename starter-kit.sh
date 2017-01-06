@@ -1,16 +1,9 @@
 #!/bin/sh
 
-install_from_aur() {
-	wget https://aur.archlinux.org/cgit/aur.git/snapshot/$1.tar.gz
-	tar -xvf $1.tar.gz
-	cd $1 && makepkg -sri --skippgpcheck --noconfirm
-	cd .. && rm -rf $1.tar.gz $1
-}
+sudo mv -vf /etc/apt/sources.list /etc/apt/sources.list~
+sudo cp -vf apt/sources.list /etc/apt/sources.list
 
-install_from_aur cower
-install_from_aur pacaur
-
-pacaur -S `cat paclist` --noconfirm
+sudo apt-get install `cat paclist` --assume-yes
 
 PREV=$PWD
 cd ~/

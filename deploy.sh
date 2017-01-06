@@ -2,7 +2,7 @@
 
 # Initial setup
 install_packages=false
-help="This is a custom deploy script for initial archlinux setup.\n"
+help="This is a custom deploy script for initial debian setup.\n"
 help="$help Options:\n"
 help="$help -i: install packages (disabled by default)\n"
 help="$help -s: change shell to \$arg (disabled by default)\n"
@@ -35,9 +35,9 @@ if $install_packages; then
 	${PWD}/starter-kit.sh
 fi
 
-if ! [[ -z ${shell+x} ]]; then
+if ! [ -z ${shell+x} ]; then
 	which_shell=`which $shell`
-	[[ -z $which_shell ]] && echo "No such shell: $shell" || chsh -s $which_shell
+	[ -z $which_shell ] && echo "No such shell: $shell" || chsh -s $which_shell
 fi
 
 ln    -vfs ${PWD}/shell/.zshrc              ~/.zshrc
