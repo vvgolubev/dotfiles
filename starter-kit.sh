@@ -1,8 +1,9 @@
 #!/bin/sh
 
-sudo mv -vf /etc/apt/sources.list /etc/apt/sources.list~
-sudo cp -vf apt/sources.list /etc/apt/sources.list
+sudo mv -vf  /etc/apt/sources.list /etc/apt/sources.list~
+sudo ln -vfs apt/sources.list /etc/apt/sources.list
 
+sudo apt-get update
 sudo apt-get install `cat paclist` --assume-yes
 
 PREV=$PWD
