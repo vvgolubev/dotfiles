@@ -26,3 +26,4 @@ gitk
 wget
 firmware-linux-nonfree
 firmware-realtek
+software-properties-common
