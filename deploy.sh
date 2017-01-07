@@ -7,20 +7,6 @@ help="$help Options:\n"
 help="$help -i: install packages (disabled by default)\n"
 help="$help -s: change shell to \$arg (disabled by default)\n"
 
-# Just add fira to stretch repos, debian!
-install_fira() {
-    FIRA_VERSION=4.202
-
-    wget https://github.com/mozilla/Fira/archive/${FIRA_VERSION}.tar.gz
-    tar -xvzf ${FIRA_VERSION}.tar.gz
-    sudo mkdir -p /usr/share/fonts/opentype/FiraSans
-    sudo mkdir -p /usr/share/fonts/truetype/FiraSans
-    sudo cp -rvf Fira-${FIRA_VERSION}/otf/*.otf /usr/share/fonts/opentype/FiraSans/
-    sudo cp -rvf Fira-${FIRA_VERSION}/ttf/*.ttf /usr/share/fonts/truetype/FiraSans/
-
-    rm -rvf ${FIRA_VERSION}.tar.gz Fira-${FIRA_VERSION}
-}
-
 # Parse params
 OPTIND=1
 while getopts ":h?is:" opt; do
@@ -98,4 +84,3 @@ sudo systemctl enable NetworkManager
 # Ad-hoc for broken debian sddm service
 sudo ln -vfs /usr/lib/systemd/system/sddm.service /etc/systemd/system/
 
-install_fira
