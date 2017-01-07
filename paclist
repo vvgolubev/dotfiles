@@ -27,3 +27,4 @@ wget
 firmware-linux-nonfree
 firmware-realtek
 software-properties-common
+xserver-xorg-input-synaptics
