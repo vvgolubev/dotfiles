@@ -25,3 +25,4 @@ zsh zsh-syntax-highlighting
 gitk
 wget
 firmware-linux-nonfree
+firmware-realtek
