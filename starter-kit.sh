@@ -18,6 +18,7 @@ sudo mv -vf  /etc/apt/sources.list /etc/apt/sources.list~
 sudo ln -vfs ${PWD}/apt/sources.list /etc/apt/sources.list
 
 sudo apt-get update
+sudo apt-get upgrade
 sudo apt-get install `cat paclist` --force-yes
 
 PREV=$PWD
