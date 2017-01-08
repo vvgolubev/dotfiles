@@ -11,7 +11,7 @@ Config {
    -- layout
    , sepChar =  "%"   -- delineator between plugin names and straight text
    , alignSep = "}{"  -- separator between left-right alignment
-   , template = "| %kbd% | %date% | %vol% | %StdinReader% }{"
+   , template = "| %kbd% | %date% | %vol% | %battery% | %StdinReader% }{"
 
    -- general behavior
    , lowerOnStart =     True    -- send to bottom of window stack on start
@@ -28,6 +28,9 @@ Config {
 
         -- volume
         , Run PipeReader "/tmp/.volume-pipe" "vol"
+
+        -- battery
+        , Run PipeReader "/tmp/.battery-pipe" "battery"
 
         -- keyboard layout indicator
         , Run Kbd            [ ("us", "<fc=#429942>US</fc>"),
