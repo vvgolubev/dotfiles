@@ -7,4 +7,4 @@ bspc config top_padding $BSPWM_PANEL_HEIGHT
 
 bspc subscribe report > "$BSPWM_PANEL_FIFO" &
 
-/home/ovaube/.config/bspwm/panel_xmobar < "$BSPWM_PANEL_FIFO" | xmobar 
+~/.config/bspwm/panel_xmobar < "$BSPWM_PANEL_FIFO" | xmobar 
