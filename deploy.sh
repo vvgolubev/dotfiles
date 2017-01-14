@@ -89,3 +89,5 @@ sudo systemctl enable NetworkManager
 # Ad-hoc for broken debian sddm service
 sudo ln -vfs /usr/lib/systemd/system/sddm.service /etc/systemd/system/
 
+# For backlight.sh to work
+sudo chown `whoami` /sys/class/backlight/*/brightness
