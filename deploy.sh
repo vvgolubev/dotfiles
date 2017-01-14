@@ -65,9 +65,12 @@ ln    -vfs ${PWD}/look/.Xdefaults           ~/.Xdefaults
 
 ln    -vfs ${PWD}/look/Trolltech.conf       ~/.config/Trolltech.conf
 
-mkdir -v   ~/bin
 chmod +x   ${PWD}/scripts/*
-ln    -vfs ${PWD}/scripts/*				    ~/bin/
+
+for script in ${PWD}/scripts/*; do
+    sudo ln -vfs "$script" /bin/${script##*/}
+    sudo chown -v `whoami` /bin/${script##*/}
+done
 
 sudo mkdir -pv  /usr/share/sddm/themes
 sudo ln    -vfs ${PWD}/sddm/sddm.conf       /etc/sddm.conf

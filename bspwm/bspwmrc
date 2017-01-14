@@ -29,4 +29,4 @@ trayer --edge top \
 	   --height 23 \
 	   --padding 1 &
 
-~/bin/autorun.sh
+autorun.sh
