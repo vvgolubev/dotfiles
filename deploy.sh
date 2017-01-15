@@ -85,9 +85,8 @@ sudo ln    -vfs ${PWD}/apt/apt.conf.d/*     /etc/apt/apt.conf.d/
 
 sudo ln    -vfs ${PWD}/udev/rules.d/*       /etc/udev/rules.d/
 
+sudo cp -vf ${PWD}/systemd/system/* /lib/systemd/system/
+sudo systemctl enable backlight-workaround
 sudo systemctl enable NetworkManager
 # Ad-hoc for broken debian sddm service
-sudo ln -vfs /usr/lib/systemd/system/sddm.service /etc/systemd/system/
-
-# For backlight.sh to work
-sudo chown `whoami` /sys/class/backlight/*/brightness
+sudo ln -vfs /lib/systemd/system/sddm.service /etc/systemd/system/
