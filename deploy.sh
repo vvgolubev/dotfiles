@@ -51,42 +51,12 @@ sudo mkdir -vp  /root/.vim/colors
 sudo ln    -vfs ${PWD}/vim/.vimrc           /root/.vimrc
 sudo ln    -vfs ${PWD}/vim/colors/*         /root/.vim/colors/
 
-ln    -vfs ${PWD}/xmonad/.xmobarrc          ~/.xmobarrc
-
-mkdir -v   ~/.config/
-
-ln    -vfs ${PWD}/bspwm                     ~/.config/
-ln    -vfs ${PWD}/sxhkd                     ~/.config/
-
-ln    -vfs ${PWD}/look/.icons               ~/.icons
-ln    -vfs ${PWD}/look/.themes              ~/.themes
-ln    -vfs ${PWD}/look/.gtkrc-2.0           ~/.gtkrc-2.0
-ln    -vfs ${PWD}/look/.Xdefaults           ~/.Xdefaults
-
-ln    -vfs ${PWD}/look/Trolltech.conf       ~/.config/Trolltech.conf
-
 chmod +x   ${PWD}/scripts/*
-
 for script in ${PWD}/scripts/*; do
     sudo ln -vfs "$script" /bin/${script##*/}
     sudo chown -v `whoami` /bin/${script##*/}
 done
 
-sudo mkdir -pv  /usr/share/sddm/themes
-sudo ln    -vfs ${PWD}/sddm/sddm.conf       /etc/sddm.conf
-sudo cp    -rfv ${PWD}/sddm/themes/*        /usr/share/sddm/themes/
-
-mkdir -v ~/scrots
-
-sudo mkdir -pv  /etc/X11/xorg.conf.d
-sudo ln    -vfs ${PWD}/X11/*                /etc/X11/xorg.conf.d/
-
 sudo ln    -vfs ${PWD}/apt/apt.conf.d/*     /etc/apt/apt.conf.d/
 
-sudo ln    -vfs ${PWD}/udev/rules.d/*       /etc/udev/rules.d/
-
-sudo cp -vf ${PWD}/systemd/system/* /lib/systemd/system/
-sudo systemctl enable backlight-workaround
 sudo systemctl enable NetworkManager
-# Ad-hoc for broken debian sddm service
-sudo ln -vfs /lib/systemd/system/sddm.service /etc/systemd/system/
