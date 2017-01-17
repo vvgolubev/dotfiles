@@ -59,4 +59,7 @@ done
 
 sudo ln    -vfs ${PWD}/apt/apt.conf.d/*     /etc/apt/apt.conf.d/
 
+sudo ln -vfs ${PWD}/polkit/* /etc/polkit-1/localauthority/50-local.d/
+sudo systemctl restart polkitd
+
 sudo systemctl enable NetworkManager
