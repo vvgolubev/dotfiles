@@ -43,13 +43,13 @@ fi
 ln    -vfs ${PWD}/shell/.zshrc              ~/.zshrc
 ln    -vfs ${PWD}/shell/.profile            ~/.profile
 
-mkdir -vp  ~/.vim/colors/
+mkdir -vp  ~/.vim/
 ln    -vfs ${PWD}/vim/.vimrc                ~/.vimrc
-ln    -vfs ${PWD}/vim/colors/*              ~/.vim/colors/
-
-sudo mkdir -vp  /root/.vim/colors
-sudo ln    -vfs ${PWD}/vim/.vimrc           /root/.vimrc
-sudo ln    -vfs ${PWD}/vim/colors/*         /root/.vim/colors/
+ln    -vfs ${PWD}/vim/colors                ~/.vim/
+ln    -vfs ${PWD}/vim/ftdetect              ~/.vim/
+ln    -vfs ${PWD}/vim/ftplugin              ~/.vim/
+ln    -vfs ${PWD}/vim/plugin                ~/.vim/
+ln    -vfs ${PWD}/vim/syntax                ~/.vim/
 
 chmod +x   ${PWD}/scripts/*
 for script in ${PWD}/scripts/*; do
