@@ -58,10 +58,3 @@ for script in ${PWD}/scripts/*; do
 done
 
 sudo ln    -vfs ${PWD}/apt/apt.conf.d/*     /etc/apt/apt.conf.d/
-
-sudo ln -vfs ${PWD}/polkit/* /etc/polkit-1/localauthority/50-local.d/
-sudo systemctl restart polkitd
-
-sudo sed -i -e "s/\/sbin\/agetty/\0 --login-pause --autologin `whoami`/" /etc/systemd/system/getty.target.wants/*.service
-
-sudo systemctl enable NetworkManager

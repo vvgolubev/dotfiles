@@ -1,6 +1,0 @@
-[nmcli]
-Identity=unix-user:ovaube
-Action=org.freedesktop.NetworkManager.*
-ResultAny=yes
-ResultInactive=no
-ResultActive=yes
