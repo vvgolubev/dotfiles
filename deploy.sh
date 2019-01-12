@@ -43,6 +43,8 @@ fi
 ln    -vfs ${PWD}/shell/.zshrc              ~/.zshrc
 ln    -vfs ${PWD}/shell/.profile            ~/.profile
 
+ln    -vfs ${PWD}/tmux/.tmux.conf           ~/.tmux.conf
+
 mkdir -vp  ~/.vim/
 ln    -vfs ${PWD}/vim/.vimrc                ~/.vimrc
 ln    -vfs ${PWD}/vim/colors                ~/.vim/
