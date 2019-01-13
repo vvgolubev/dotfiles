@@ -11,3 +11,5 @@ alias cp='cp -v'
 alias mv='mv -v'
 alias rm='rm -v'
 alias mkdir='mkdir -pv'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
