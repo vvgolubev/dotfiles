@@ -31,7 +31,12 @@ endfunction
 
 
 set wm=0
+set tw=0
 set nowrap
+
+set noswapfile
+set nobackup
+set nowritebackup
 
 set showmatch
 set hlsearch
@@ -71,6 +76,8 @@ set undoreload=10000
 set list
 set listchars=tab:>-,trail:~,extends:>,precedes:<
 
+set completeopt=menuone,noselect
+
 let g:column_highlight = 0
 let g:column_number_highlight = 120
 nmap <C-B><C-B> :call ToggleColumnHighlight()<CR>
@@ -85,10 +92,7 @@ vmap <C-c> "+y
 vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
 
-nnoremap <C-h> :tabprevious<CR>
-nnoremap <C-l> :tabnext<CR>
-nnoremap <leader>z :-tabmove<CR>
-nnoremap <leader>x :+tabmove<CR>
+nnoremap <C-r><C-r> :e %<CR>
 
 inoremap <expr><C-n> pumvisible() ? '<C-n>' : '<C-X><C-U>'
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
@@ -115,6 +119,7 @@ Plug 'kana/vim-operator-user'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-dispatch'
+Plug 'w0rp/ale'
 Plug 'terryma/vim-smooth-scroll'
 Plug 'xolox/vim-session'
 Plug 'xolox/vim-misc'
