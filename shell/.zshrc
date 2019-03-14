@@ -7,6 +7,8 @@ source $ZSH/oh-my-zsh.sh
 export XDG_CONFIG_HOME="$HOME/.config"
 export PATH="/usr/local/bin:$PATH"
 export EDITOR=vim
+export TERM=xterm-256color
+export LC_ALL="en_US.UTF-8"
 
 alias cp='cp -v'
 alias mv='mv -v'
