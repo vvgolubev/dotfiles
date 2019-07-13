@@ -7,3 +7,5 @@ curl
 zsh
 zsh-syntax-highlighting
 software-properties-common
+silversearcher-ag
+ripgrep
