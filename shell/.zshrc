@@ -9,7 +9,6 @@ export PATH="/usr/local/bin:$PATH"
 export EDITOR=vim
 export TERM=xterm-256color
 export LC_ALL="en_US.UTF-8"
-export DEBEMAIL="subsinthe@gmail.com"
 
 alias cp='cp -v'
 alias mv='mv -v'
