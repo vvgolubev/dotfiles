@@ -5,7 +5,7 @@ plugins=(git github)
 source $ZSH/oh-my-zsh.sh
 
 export XDG_CONFIG_HOME="$HOME/.config"
-export PATH="/usr/local/bin:$PATH"
+export PATH="${HOME}/usr/bin:$PATH"
 export EDITOR=vim
 export TERM=xterm-256color
 export LC_ALL="en_US.UTF-8"
