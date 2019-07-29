@@ -47,6 +47,7 @@ ln    -vfs ${PWD}/tmux/.tmux.conf           ~/.tmux.conf
 
 mkdir -vp  ~/.vim/
 ln    -vfs ${PWD}/vim/.vimrc                ~/.vimrc
+ln    -vfs ${PWD}/vim/after                 ~/.vim/
 ln    -vfs ${PWD}/vim/colors                ~/.vim/
 ln    -vfs ${PWD}/vim/before                ~/.vim/
 ln    -vfs ${PWD}/vim/ftdetect              ~/.vim/
