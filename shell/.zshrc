@@ -15,10 +15,4 @@ alias mv='mv -v'
 alias rm='rm -v'
 alias mkdir='mkdir -pv'
 
-bindkey -v
-bindkey '^P' up-history
-bindkey '^N' down-history
-bindkey '^r' history-incremental-search-backward
-export KEYTIMEOUT=1
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
