@@ -80,6 +80,7 @@ Plug 'davidhalter/jedi-vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'jlfwong/vim-mercenary'
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'kana/vim-operator-user'
 Plug 'kkoomen/vim-doge'
 Plug 'mileszs/ack.vim'
