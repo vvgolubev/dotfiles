@@ -75,7 +75,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'kkoomen/vim-doge'
 Plug 'mileszs/ack.vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
-Plug 'shougo/neocomplete.vim'
 Plug 'terryma/vim-smooth-scroll'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-commentary'
