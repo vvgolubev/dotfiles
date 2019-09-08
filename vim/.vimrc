@@ -67,6 +67,7 @@ nnoremap <C-r><C-r><C-r> :e! %<CR>
 
 call plug#begin('~/.vim/plugged')
 
+Plug '~/dev/arc/arcadia/junk/vvgolubev/vim-archer'
 Plug 'cespare/vim-toml'
 Plug 'davidhalter/jedi-vim'
 Plug 'easymotion/vim-easymotion'
