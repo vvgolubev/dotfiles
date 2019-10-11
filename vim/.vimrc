@@ -20,7 +20,7 @@ set foldmethod=syntax
 set nofoldenable
 
 set background=dark
-colorscheme sierra
+colorscheme wombat256mod
 call PrettyCursor()
 
 set shiftwidth=4
