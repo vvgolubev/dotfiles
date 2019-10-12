@@ -19,7 +19,6 @@ set backspace=2
 set foldmethod=syntax
 set nofoldenable
 
-set background=dark
 colorscheme wombat256mod
 call PrettyCursor()
 
@@ -71,6 +70,7 @@ Plug '~/dev/arc/arcadia/junk/vvgolubev/vim-archer'
 Plug 'cespare/vim-toml'
 Plug 'davidhalter/jedi-vim'
 Plug 'easymotion/vim-easymotion'
+Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'kkoomen/vim-doge'
@@ -80,8 +80,6 @@ Plug 'terryma/vim-smooth-scroll'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/a.vim'
 Plug 'w0rp/ale'
 Plug 'xolox/vim-session'
