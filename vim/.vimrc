@@ -19,7 +19,6 @@ set backspace=2
 set foldmethod=syntax
 set nofoldenable
 
-colorscheme wombat256mod
 call PrettyCursor()
 
 set shiftwidth=4
@@ -67,6 +66,7 @@ nnoremap <C-r><C-r><C-r> :e! %<CR>
 call plug#begin('~/.vim/plugged')
 
 Plug '~/dev/arc/arcadia/junk/vvgolubev/vim-archer'
+Plug 'arcticicestudio/nord-vim'
 Plug 'cespare/vim-toml'
 Plug 'davidhalter/jedi-vim'
 Plug 'easymotion/vim-easymotion'
