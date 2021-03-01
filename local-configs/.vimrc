@@ -46,6 +46,8 @@ set listchars=tab:>-,trail:~,extends:>,precedes:<
 
 set completeopt=menuone,noselect
 
+set shortmess=filnxtToO
+
 let g:column_highlight = 0
 let g:column_number_highlight = 120
 nmap <C-B><C-B> :call ToggleColumnHighlight()<CR>
@@ -68,14 +70,14 @@ call plug#begin('~/.vim/plugged')
 Plug '~/dev/arc/arcadia/junk/vvgolubev/vim-archer'
 Plug 'arcticicestudio/nord-vim'
 Plug 'cespare/vim-toml'
-Plug 'davidhalter/jedi-vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'kkoomen/vim-doge'
+Plug 'mattn/vim-lsp-settings'
 Plug 'mileszs/ack.vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'prabirshrestha/vim-lsp'
 Plug 'terryma/vim-smooth-scroll'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-commentary'
