@@ -1,0 +1,3 @@
+local-configs/.config/nvim/plugged
+local-configs/.config/nvim/sessions
+local-configs/.config/nvim/undo
