@@ -7,6 +7,8 @@ source $ZSH/oh-my-zsh.sh
 export XDG_CONFIG_HOME="$HOME/.config"
 export PATH="${HOME}/usr/bin:$PATH"
 export PATH="$PATH:/home/vvgolubev/.cargo/bin"
+export PATH="$PATH:/home/vvgolubev/.local/bin"
+export PATH="$PATH:/home/vvgolubev/.fzf/bin"
 export EDITOR=nvim
 export TERM=xterm-256color
 export LC_ALL="en_US.UTF-8"
