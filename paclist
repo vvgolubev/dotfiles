@@ -10,3 +10,6 @@ software-properties-common
 silversearcher-ag
 ripgrep
 stow
+fzf
+bat
+build-essential

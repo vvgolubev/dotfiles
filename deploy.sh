@@ -38,4 +38,3 @@ if ! [ -z ${shell+x} ]; then
 fi
 
 stow --verbose --restow local-configs
-sudo stow --verbose --restow --target / global-configs
